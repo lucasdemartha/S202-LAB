@@ -8,5 +8,5 @@ class professor (pessoa):
     def toString (self):
         return f'''
         Aula de {self.especialidade}
-            nome: {self.nome}
+            Professor: {self.nome}
         '''
