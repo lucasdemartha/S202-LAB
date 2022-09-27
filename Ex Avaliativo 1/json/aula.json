@@ -1,0 +1,13 @@
+[
+    {
+        "_id": {
+            "$oid": "63333a8c02e1f9e0aff68cdd"
+        },
+        "Aula": "bd2",
+        "Professor": {
+            "Nome": "software",
+            "Especialidade": "renzo"
+        },
+        "Alunos": "\n        Aula de bd2\n        Professor: {'Nome': 'software', 'Especialidade': 'renzo'}\n        [{'Nome': 'lucas', 'Matricula': '198', 'Curso': 'ges', 'Periodo': '5'}],[{'Nome': 'luiza', 'Matricula': '9993', 'Curso': 'gec', 'Periodo': '5'}],"
+    }
+]
