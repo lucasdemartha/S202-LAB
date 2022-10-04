@@ -1,0 +1,40 @@
+1.a) MATCH(n) RETURN n
+b) MATCH(n:Game) WHERE n.ano > 2012 RETURN n;
+c) MATCH (n:Game) WHERE n.genero =~ 'Terror' RETURN n;
+d) MATCH n=()-[j:JOGOU]->() WHERE j.nota > 7 return n;
+
+2.a)
+
+CREATE(g:Game{titulo:'League of Legends',genero:'MOBA',ano:2009});
+CREATE(g:Game{titulo:'Counter Strike',genero:'FPS',ano:2012});
+CREATE(g:Game{titulo:'Elden Ring',genero:'RPG',ano:2022});
+CREATE(g:Game{titulo:'Priston Tale',genero:'MMO RPG',ano:2001});
+
+b)
+
+CREATE(j:Jurado{nome:'Lucas'});
+CREATE(j:Jurado{nome:'Nicholas'});
+CREATE(j:Jurado{nome:'Leo'});
+
+c)
+
+MATCH(j:Jurado{nome:'Lucas'}),(g:Game{titulo:'League of Legends'})
+CREATE(j)-[:JOGOU{nota:10, horas:90000}]->(g);
+
+MATCH(j:Jurado{nome:'Lucas'}),(g:Game{titulo:'Counter Strike'})
+CREATE(j)-[:JOGOU{nota:9, horas: 8000}]->(g);
+
+MATCH(j:Jurado{nome:'Lucas'}),(g:Game{titulo:'Priston Tale'})
+CREATE(j)-[:JOGOU{nota:10, horas: 15000}]->(g);
+
+MATCH(j:Jurado{nome:'Nicholas'}),(g:Game{titulo:'Counter Strike'})
+CREATE(j)-[:JOGOU{nota:8, horas: 3000}]->(g);
+
+MATCH(j:Jurado{nome:'Nicholas'}),(g:Game{titulo:'Elden Ring'})
+CREATE(j)-[:JOGOU{nota:10, horas: 650}]->(g);
+
+MATCH(j:Jurado{nome:'Leo'}),(g:Game{titulo:'Priston Tale'})
+CREATE(j)-[:JOGOU{nota:7, horas: 50}]->(g);
+
+MATCH(j:Jurado{nome:'Leo'}),(g:Game{titulo:'League of Legends'})
+CREATE(j)-[:JOGOU{nota:10, horas: 4500}]->(g);
