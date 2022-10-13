@@ -1,0 +1,44 @@
+//Agregações
+----------------------
+MATCH(n:Continent) RETURN COUNT(n.name);
+
+MATCH(n:Airport) RETURN SUM(n.altitude);
+
+MATCH(n:Airport) RETURN AVG(n.runways);
+
+MATCH(n:Airport) RETURN MIN(n.altitude);
+
+MATCH(n:Airport) RETURN MAX(n.altitude);
+
+
+-----------------------
+
+//Funções Matematicas
+
+RETURN ABS(15 - 37), 15 - 37;
+
+RETURN CEIL(0.34), CEIL(1.5);
+
+RETURN FLOOR(0.34), FLOOR(1.5);
+
+RETURN RAND()
+
+RETURN SIGN(-37), SIGN(0.3), SIGN(1)
+
+------------------------
+
+//Funções Strings
+
+RETURN LEFT('Orlando', 5);
+
+RETURN RIGHT('Orlando', 5);
+
+RETURN TOUPPER('orlando');
+
+RETURN TOLOWER('ORLANDO');
+
+RETURN REVERSE("Orlando");
+
+
+
+
